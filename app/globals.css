@@ -3,3 +3,27 @@
 @tailwind utilities;
 
 
+
+.active{
+  background-color: #F6FCFF;
+  padding: 10px 20px;
+  color: #008EEF;
+  border-radius: 20px;
+}
+
+.active-underline{
+  border-radius: 10px 10px 0 0;
+  height: 5px;
+  margin-top: 20px;
+}
+
+nav {
+  box-shadow: 0 10px 20px -20px gray;
+}
+
+.hero-container{
+  background-image: url('../public/assets/images/unsplash.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 10px;
+}
