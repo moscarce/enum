@@ -23,9 +23,11 @@ export default function RootLayout({
         </nav>
         <main>
           <section>
-            <Hero />
+              <Hero />
           </section>
-          {children}
+          <section>
+              {children}
+          </section>
         </main>
       </body>
     </html>
