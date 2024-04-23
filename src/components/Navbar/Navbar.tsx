@@ -1,5 +1,4 @@
 'use client'
-import { count } from "console"
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
@@ -37,7 +36,7 @@ const Navbar = () => {
         <div className="flex gap-5 items-center">
             <div className="relative">
                 <img src="/assets/images/bell.png" alt="" />
-                <p className=" absolute top-[-3px] right-[-2px] text-white bg-[#008EEF] rounded-full p-1 px-[0.4rem] text-[6px]">1</p>
+                <p className=" absolute top-[-3px] right-[-2px] text-white bg-[#008EEF] rounded-full p-1 px-[0.4rem] text-[7px] font-bold">1</p>
             </div>
             <div className="flex items-center gap-3">
                     <img src="/assets/images/user.png" alt="" />
