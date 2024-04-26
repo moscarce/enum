@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/src/components/Navbar/Navbar";
 import Hero from "@/src/components/Hero/Hero";
+// import allReducer from "@/src/state/reducer";
+
+
 
 
 export const metadata: Metadata = {
@@ -15,20 +18,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
+
+
+
   return (
     <html lang="en">
       <body>
-        <nav>
-          <Navbar />
-        </nav>
-        <main>
-          <section>
-              <Hero />
-          </section>
-          <section>
-              {children}
-          </section>
-        </main>
+          <nav>
+            <Navbar />
+          </nav>
+          <main>
+            <section>
+                <Hero />
+            </section>
+            <section>
+                {children}
+            </section>
+          </main>
       </body>
     </html>
   );

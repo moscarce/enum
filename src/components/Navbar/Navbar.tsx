@@ -9,19 +9,19 @@ const Navbar = () => {
     const pathname = usePathname();
     
     const navLink = [
-        {link: '/', title: 'Home'},
+        {link: '/home', title: 'Home'},
         {link: '/workspace', title: 'Workspace'},
         {link: '/resourceslibrary', title: 'Resources Library'},
     ]
   return (
-    <div className="flex justify-between items-center pt-7 px-20 font-bold">
+    <div className="flex justify-between items-center pt-7 px-20 font-bold max-md:flex max-md:justify-between max-md:px-10">
         <Link href='/'>
             <img src="/assets/images/logo.png" alt="" />
         </Link>
         <div className="flex text-[17px] gap-8">
             {navLink.map((item, index) => {
                 const isActive = pathname.startsWith(item.link)                
-                return <div>
+                return <div className='max-md:hidden'>
                 <Link 
                     href={item.link} 
                     key={index}
@@ -40,12 +40,12 @@ const Navbar = () => {
             </div>
             <div className="flex items-center gap-3">
                     <img src="/assets/images/user.png" alt="" />
-                <div className="flex items-center font-normal gap-4">
+                <div className="flex items-center font-normal gap-4 max-md:hidden">
                     <p>Onomowa</p>
                     <img src="/assets/images/chevron-down.png" alt="" />
                 </div>
             </div>
-            <div>
+            <div className="max-md:hidden">
                 <img src="/assets/images/grid.png" alt="" />
             </div>
         </div>
