@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/src/components/Navbar/Navbar";
 import Hero from "@/src/components/Hero/Hero";
-// import allReducer from "@/src/state/reducer";
-
+import { StoreProvider } from "@/src/store/StoreProvider";
 
 
 
@@ -22,20 +21,22 @@ export default function RootLayout({
 
 
   return (
-    <html lang="en">
-      <body>
-          <nav>
-            <Navbar />
-          </nav>
-          <main>
-            <section>
-                <Hero />
-            </section>
-            <section>
-                {children}
-            </section>
-          </main>
-      </body>
-    </html>
+    <StoreProvider>
+      <html lang="en">
+        <body>
+            <nav>
+              <Navbar />
+            </nav>
+            <main>
+              <section>
+                  <Hero />
+              </section>
+              <section>
+                  {children}
+              </section>
+            </main>
+        </body>
+      </html>
+    </StoreProvider>
   );
 }

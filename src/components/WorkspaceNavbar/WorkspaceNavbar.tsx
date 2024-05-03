@@ -1,4 +1,3 @@
-import Image from "next/image"
 import NavbarCard from "./NavbarCard"
 
 const WorkspaceNavbar = () => {

@@ -21,7 +21,7 @@ const Navbar = () => {
         <div className="flex text-[17px] gap-8">
             {navLink.map((item, index) => {
                 const isActive = pathname.startsWith(item.link)                
-                return <div className='max-md:hidden'>
+                return <div className='max-md:hidden' key={index}>
                 <Link 
                     href={item.link} 
                     key={index}
