@@ -45,7 +45,7 @@ const InviteInstructor: React.FC = () => {
       <Input 
         size="lg" 
         placeholder="Email, comma separated" 
-        sx={{width: '500px'}} 
+        sx={{width: '500px','@media (max-width: 768px)': { width: '350px' }}} 
         value={emails}
         onChange={handleInputChange}
       />
@@ -62,7 +62,7 @@ const InviteInstructor: React.FC = () => {
           sx={{ 
             backgroundColor: '#008EEF', 
             padding: '10px 30px', 
-            borderRadius: '10px' 
+            borderRadius: '10px',
           }} 
           onClick={handleInviteClick}
           disabled={emailList.length === 0 && !emails.trim()}
