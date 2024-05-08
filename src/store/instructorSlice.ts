@@ -61,10 +61,24 @@ const instructorSlice = createSlice({
     },
     findInstructor: (state, action) => {
       state.searchBy = action.payload;
+    },
+    addInstructor: (state, {payload}) => {
+      payload.forEach((element:{email:string, isValid:boolean}) => {
+        if (element.isValid){
+          state.instructorsList.push({
+            name: element.email.split('@')[0],
+            email: element.email,
+            course: 'N/A',
+            status: 'Active',
+            dateAdded: '12 Aug, 2021',
+            lastActivity: '12 Aug, 2021'
+          });
+        }
+      });
     }
   }
 });
 
-export const { removeInstructor, findInstructor } = instructorSlice.actions;
+export const { removeInstructor, findInstructor, addInstructor } = instructorSlice.actions;
 
 export default instructorSlice.reducer;

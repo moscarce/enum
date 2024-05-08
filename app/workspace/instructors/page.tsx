@@ -19,7 +19,7 @@ const Instructors = () => {
 
   const router = useRouter();
 
-  const instructors = useSelector((state:{instructorState:InstructorState[], instructorOption:{showOptions: boolean} }) => state.instructorState)
+  const instructors = useSelector((state:{instructorState:InstructorState[], instructorOption:{showOptions: boolean}, email:any }) => state.instructorState)
 
   
   
