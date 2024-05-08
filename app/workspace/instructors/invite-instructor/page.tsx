@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 import { useDispatch,useSelector } from 'react-redux';
 import { setMessage } from '@/src/store/instructorOptionSlice';
 import { useRouter } from "next/navigation"
-import { addEmail } from '@/src/store/emailSlice';
+import { addEmail, resetEmail } from '@/src/store/emailSlice';
 import { addInstructor } from '@/src/store/instructorSlice';
 
 
@@ -37,6 +37,7 @@ const InviteInstructor: React.FC = () => {
     emails.length > 0 && dispatch(setMessage('Invite successfully sent'))
     emails.length > 0 && dispatch(addInstructor(emails))
     emails.length === 0 &&dispatch(addEmail(email))
+    emails.length > 0 && dispatch(resetEmail())
     emails.length > 0 && router.push('/workspace/instructors')
   }
 

@@ -20,10 +20,13 @@ const emailSlice = createSlice({
             } else {
                 state.push({ email: payload, isValid: emailPattern.test(payload) });
             }
+        },
+        resetEmail: (state) => {
+            state.splice(0, state.length)
         }
     }
 });
 
-export const {addEmail} = emailSlice.actions;
+export const {addEmail, resetEmail} = emailSlice.actions;
 
 export default emailSlice.reducer;
