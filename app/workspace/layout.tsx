@@ -10,9 +10,9 @@ const layout = ({ children,}: Readonly<{children: React.ReactNode;}>) => {
       <div>
         <Message />
       </div>
-      <div className="flex px-16 py-10 max-md:flex-col max-md:px-4">
+      <div className="flex px-10 py-10 max-md:flex-col max-md:px-4">
           <div>
-              <p className="hidden max-md:block font-normal mb-4">Switch between tabs</p>
+              <p className="hidden max-md:block font-normal mb-0">Switch between tabs</p>
               <WorkspaceNavbar />
           </div>
           <div className=" w-[100%]">{children}</div>

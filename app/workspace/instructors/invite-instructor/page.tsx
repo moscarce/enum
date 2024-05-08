@@ -49,20 +49,20 @@ const InviteInstructor: React.FC = () => {
         value={emails}
         onChange={handleInputChange}
       />
-      <div>
+      {emailList.length > 0 && <div className='border-2 border-[#D0DCE4] px-4 py-3 grow-0'>
         {emailList.map((emailObj, index) => (
-          <div key={index} className={`border-4 rounded-2xl px-8 py-1 font-medium ${emailObj.isValid ? 'border-blue-500' : 'border-red-500'} my-2`}>
+          <div key={index} className={`border-[1px] rounded-3xl px-3 py-1 font-bold text-sm ${emailObj.isValid ? 'border-blue-500 text-blue-500' : 'border-red-500 text-red-500'} my-2`}>
             {emailObj.email}
           </div>
         ))}
-      </div>
+      </div>}
       <div>
         <Button 
           variant="contained" 
           sx={{ 
             backgroundColor: '#008EEF', 
-            padding: '10px 30px', 
-            borderRadius: '10px',
+            padding: '12px 24px', 
+            borderRadius: '8px',
           }} 
           onClick={handleInviteClick}
           disabled={emailList.length === 0 && !emails.trim()}

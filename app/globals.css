@@ -27,3 +27,9 @@ nav {
   background-size: cover;
   margin-top: 20px;
 }
+
+@media not all and (min-width: 768px) {
+    body {
+        margin-bottom: 100px;
+    }
+}
