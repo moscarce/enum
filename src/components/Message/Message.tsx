@@ -27,10 +27,11 @@ const Message = () => {
     const {showMessage, message} = useSelector((state:{instructorState:InstructorState[], instructorOption:optionState }) => state.instructorOption)
 
     useEffect(() => {
-      setTimeout(() => {
-        dispatch(hideMessage())
-      }, 3000)
-    },[message])
+  const timer = setTimeout(() => {
+    dispatch(hideMessage());
+  }, 3000);
+  return () => clearTimeout(timer);
+}, [message]);
 
 
   return (
